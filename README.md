@@ -47,13 +47,55 @@ futhermore user can sorting their favorite movie list
 
     Scenario: Scenario 5-Remove Movie from Favorite list
 ```
-3. <strong>SreenShots dan ScreenRecord Automation </strong>
+3. <strong>SreenShots dan ScreenRecord Automation </strong><br>
 4. <strong>Cara Mengganti Username dan Password Akun Tmdb </strong><br>
    Untuk mengubah username dan password Tmdb silahkan untuk mengakses folder di bawah ini:<br>
-   a. Buka folder Cypress > Fixtures > loginData.json<br>
+   A. Buka folder Cypress > Fixtures > loginData.json<br>
    `fixtures/loginData.json`<br>
 5. <strong>Note Untuk Reviewer</strong><br>
-   1. 
+Point berapa saja dari <strong>kriteria wajib</strong> dan <strong>optional task</strong> yg sudah dikerjakan:</p>
+   A. <strong>Kriteria Wajib</strong>:
+<ul>
+<li><strong>Point 1</strong>: Gambaran fungsionalitas untuk melakukan pengujian automation (ada pada script pengujian di branch main)</li>
+<li><strong>Point 2</strong>: Menuliskan scenario pengujian dalam format Gherkin (ada pada nomor 2 di atas)</li>
+<li><strong>Point 3</strong>: Menggunakan Cypress untuk pengujian</li><br>
+<img width="959" alt="image" src="https://github.com/wulanmaulidya/simpliDot-QA-Automation/assets/91161995/0eec3d11-be08-4b0a-af74-84f5b192c20f"></p>
+<li><strong>Point 4</strong>: Validasi setiap step pengujian</li><br>
+Validasi step pada scenario 1:</p>
+    
+```javascript
+          Then("movie can not mark as favorite and should have text {string}", () => {
+            cy.get('li.tooltip.use_tooltip').then($assertion => {
+                if($assertion.length > 0){
+            cy.wrap($assertion[1]).title('eq', 'Masuk untuk menambahkan film ke daftar sukaan anda')
+                }else{
+            cy.log('Element is not found')
+            cy.wait(3000)
+})
+})
+```
+Validasi step pada scenario 2:<br>
+```javascript
+          Then ('user can see that movie should be in their favorite list', () => {
+            cy.get('#results_page_1').should('exist')
+            cy.title('eq', 'Kimetsu no Yaiba').should('exist')
+            cy.wait(3000)
+        })
+```
+Validasi step pada scenario 3:<br>
+```javascript
+shdsgdh
+```
+Validasi step pada scenario 4:<br>
+```javascript
+sahghgdhasd
+```
+Validasi step pada scenario 5:<br>
+```javascript
+sjadjhj
+```
+<li><strong>Point 5</strong>: Username dan Password Tmdb (ada pada nomor 4 di atas)</li><br>
+
    
    
 
