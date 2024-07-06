@@ -1,0 +1,32 @@
+{
+  "name": "simplidot-qa-automation",
+  "version": "2.0.0",
+  "description": "simplidot(tehnical test)-wulanmaulidya",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wulanmaulidya/simpliDot-QA-Automation.git"
+  },
+  "author": "wulan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wulanmaulidya/simpliDot-QA-Automation/issues"
+  },
+  "homepage": "https://github.com/wulanmaulidya/simpliDot-QA-Automation#readme",
+  "dependencies": {
+    "cypress": "^13.13.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "prettier": "^3.3.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/support/step_definitions/",
+    "nonGlobalStepDefinitions": false
+  },
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.1.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.1"
+  }
+}
