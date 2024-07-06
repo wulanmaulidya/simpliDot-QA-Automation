@@ -49,15 +49,10 @@ When('user click a fav button', () => {
     cy.wait(3000)
 })
 
-Then('user go to profile and check overview', () => {
+Then('user go to profile and check overview and select sub menu most favorite', () => {
     cy.overview()
 })
-       
-Then('user select sub menu most favorite', ()=> {
-    cy.get('.group > :nth-child(2) > span.k-link').click()
-
-})
-       
+           
 Then('user select whether movie or serial tv', () => {
     cy.get('div.k-animation-container').find('a.k-link.k-menu-link').contains('a', 'Serial TV').click()
 })
@@ -73,30 +68,23 @@ When('user select a fews movie for mark as favorite', () => {
     cy.selectTranslate()
     cy.fixture('loginData').then((user)=> {
         cy.login(user.validUser.username, user.validUser.password)
+        cy.get('div.nav_wrapper').find('a.logo').click()
     })
-    cy.get('div.nav_wrapper').find('a.logo').click()
-    cy.get('#trending_scroller > div > div:nth-child(10) > div.image > div.options > a').scrollIntoView().click()
-    cy.get('div.notification.success').should('exist')
-    cy.wait(3000)
-    cy.get('#trending_scroller > div > div:nth-child(13) > div.image > div.options > a').click()
-    cy.get('div.notification.success').should('exist')
-    cy.wait(3000)
-    cy.get('#trending_scroller > div > div:nth-child(7) > div.image > div.options > a').click()
-    cy.get('div.notification.success').should('exist')
-    cy.wait(3000)
+    cy.movieHelper()
     cy.overview()
-    cy.get('.group > :nth-child(2) > span.k-link').click()
     cy.get('div.k-animation-container').find('a.k-link.k-menu-link').contains('a', 'Film').click()
 })
 
-Then('the movie should exist ', () => {
+Then('the movie should exist in their favorite list', () => {
     cy.get('#results_page_1').should('exist')
+    cy.title('eq', 'Despicable Me 2').should('exist')
+    cy.title('eq', 'The Boy and the Heron').should('exist')
     cy.wait(3000)
 })
 
 
 //Scenario 4: Scenario-Sorting movie in favorite list
-When('user go to their favorite list user go to their favorite list and sorting the movie in their favorite list', () => {
+When('user go to their favorite list and sorting the movie in their favorite list', () => {
     cy.selectTranslate()
     cy.fixture('loginData').then((user)=> {
         cy.login(user.validUser.username, user.validUser.password)
@@ -108,6 +96,8 @@ When('user go to their favorite list user go to their favorite list and sorting 
                 cy.log('Element is not found')
             }
         })
+    cy.get('.group > :nth-child(2) > span.k-link').click()
+    cy.get('div.k-animation-container').find('a.k-link.k-menu-link').contains('a', 'Film').click()
 })
 
 Then('the movie will sorted as their want', () => {
@@ -138,13 +128,18 @@ Then('the movie will sorted as their want', () => {
 
 //Scenario 5: Scenario-Remove Movie from Favorite list
 When('user select a fews movie for remove from their favorite list', () => {
-
+    cy.selectTranslate()
+    cy.fixture('loginData').then((user)=> {
+        cy.login(user.validUser.username, user.validUser.password)
+        cy.get('div.nav_wrapper').find('a.logo').click()
+    })
+    cy.movieHelper()
 })
        
 When('user check into their movie favorite list', () => {
-
+    cy.overview()
 })
        
-Then('the movie should not exist', () => {
-
+Then('the movie should not exist in their favorite list', () => {
+    cy.get('#results_page_1').should('not.exist')
 })

@@ -9,4 +9,5 @@ cy.get('li.user').scrollIntoView().click()
             cy.log('Element is not found')
         }
     })
+    cy.get('.group > :nth-child(2) > span.k-link').click()
 })
