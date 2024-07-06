@@ -54,7 +54,7 @@ futhermore user can sorting their favorite movie list
    `fixtures/loginData.json`<br>
 5. <strong>Note Untuk Reviewer</strong><br>
 Point berapa saja dari <strong>kriteria wajib</strong> dan <strong>optional task</strong> yg sudah dikerjakan:</p>
-   A. <strong>Kriteria Wajib</strong>:
+    A. <strong>Kriteria Wajib</strong>:
 <ul>
 <li><strong>Point 1</strong>: Gambaran fungsionalitas untuk melakukan pengujian automation (ada pada script pengujian di branch main)</li>
 <li><strong>Point 2</strong>: Menuliskan scenario pengujian dalam format Gherkin (ada pada nomor 2 di atas)</li>
@@ -94,8 +94,16 @@ Validasi step pada scenario 5:<br>
 ```javascript
 sjadjhj
 ```
-<li><strong>Point 5</strong>: Username dan Password Tmdb (ada pada nomor 4 di atas)</li><br>
-
+<li><strong>Point 5</strong>: Username dan Password Tmdb (ada pada nomor 4 di atas)</li>
+username dan password dibuat di dalam file <strong>support/login_helper.js</strong> untuk data loginnya ada dalam file <strong>fixtures/loginData.json</strong></p>
+<li><strong>Point 6</strong>: Menggunakan Git dan Github dengan rapi, detail dan jelas</li>
+<li><strong>Point 7</strong>: Membuat dokumentasi project dalam bentuk markdown (.md) file</li>
+</ul>
+    B. <strong>Saran / Optional Task</strong>
+<ul>
+<li><strong>Point 1</strong>: Codeline yang dibuat pada test kali ini clean dan mudah dibaca</li>
+<li><strong>Point 2</strong>: Penulisan scenario menggunakan bahasa inggris (us) (ada pada nomor 2 di atas)</li>
+<li><strong>Point 3</strong>: Menggunakan Cypress untuk pengujian</li><br>
    
    
 
