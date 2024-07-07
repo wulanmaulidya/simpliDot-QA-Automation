@@ -6,7 +6,7 @@ Also users can mark a few movie (more than one) into their favorite list
 Users can remove movie that mark as favorit earlier from their favorite list
 futhermore user can sorting their favorite movie list
 
-
+   @regression
     Scenario: Scenario 1-Marks as Favorite [NEGATIVE]
        Given user visits movie page
        When user select a indonesia languange
@@ -30,7 +30,7 @@ futhermore user can sorting their favorite movie list
        Then the movie should exist in their favorite list
 
 
-    Scenario: Scenario 4-Sorting movie in favorite list [POSITIVE]
+    Scenario: Scenario 4-Sorting Movie in favorite list [POSITIVE]
        Given user visits movie page
        When user go to their favorite list and sorting the movie in their favorite list
        Then the movie will sorted as their want

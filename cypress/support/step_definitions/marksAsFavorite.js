@@ -1,5 +1,6 @@
 import { Given, When, Then} from '@badeball/cypress-cucumber-preprocessor'
 
+
 //Scenario 1: Marks as Favorite [NEGATIVE]
 Given('user visits movie page', () => {
     cy.visit('/')
@@ -11,7 +12,7 @@ When('user select a indonesia languange', () => {
 })
 
 When('user select a movie', () => {
-    cy.get('a.image[title="SpongeBob SquarePants"]').click()
+    cy.get('a.image[title="Space Cadet"]').click()
 })
 
 When('user click a favorite button', () => {
@@ -28,6 +29,7 @@ Then("movie can not mark as favorite and should have text {string}", () => {
         }})
     })
 
+
 //Scenario 2: Scenario: Marks as Favorite [POSITIVE]
 When('user select a ind languange', () => {
         cy.selectTranslate()
@@ -41,7 +43,7 @@ When('user login to Application', () => {
 })
 
 When('user select a film', () => {
-    cy.get('a.image[title="Kimetsu no Yaiba"]').click()
+    cy.get('a.image[title="Kimetsu no Yaiba"]').click({force: true})
 })
 
 When('user click a fav button', () => {
@@ -63,6 +65,7 @@ Then('user can see that movie should be in their favorite list', () => {
     cy.wait(3000)
 })
 
+
 //Scenario 3: Scenario-Mark a Fews Movie into Favorite list
 When('user select a fews movie for mark as favorite', () => {
     cy.selectTranslate()
@@ -77,7 +80,7 @@ When('user select a fews movie for mark as favorite', () => {
 
 Then('the movie should exist in their favorite list', () => {
     cy.get('#results_page_1').should('exist')
-    cy.title('eq', 'Despicable Me 2').should('exist')
+    cy.title('eq', 'Despicable Me 4').should('exist')
     cy.title('eq', 'The Boy and the Heron').should('exist')
     cy.wait(3000)
 })
@@ -101,28 +104,22 @@ When('user go to their favorite list and sorting the movie in their favorite lis
 })
 
 Then('the movie will sorted as their want', () => {
-    cy.get('div.group_dropdown.filters').then(($element)=> {
-        if($element == 'span.text', 'Ditambahkan' ){
-            cy.wrap($element).click()
-            cy.get('a.sort_order.color_hover.pink.no_click.selected').click()
-            cy.get('#results_page_1').should('exist')
-            cy.wait(3000)
-        }
-
-        if($element == 'span.text', 'Popularitas') {
-            cy.wrap($element).click()
-            cy.get('a.sort_order.color_hover.pink.no_click.selected').click()
-            cy.get('#results_page_1').should('exist')
-            cy.wait(3000)
-        }
-
-        if($element == 'span.text', 'Tanggal Rilis'){
-            cy.wrap($element).click()
-            cy.get('a.sort_order.color_hover.pink.no_click.selected').click()
-            cy.get('#results_page_1').should('exist')
-            cy.wait(3000)
-        }
-    })
+    //error code application "ga is not defined"
+    cy.get('div.group_dropdown.filters').contains('span.text','Popularitas').click({force: true})
+    cy.get('div.group_dropdown.sort')
+    .find('.sort_order.selected.color_hover.pink.no_click').click()
+    cy.get('#results_page_1').should('exist')
+    cy.wait(3000)
+    cy.get('div.group_dropdown.filters').contains('span.text','Tanggal Rilis').click({force: true})
+    cy.get('a.sort_order.color_hover.pink.no_click.selected')
+    .find('.sort_order.selected.color_hover.pink.no_click').click()
+    cy.get('#results_page_1').should('exist')
+    cy.wait(3000)
+    cy.get('div.group_dropdown.filters').contains('span.text','Ditambahkan').click({force: true})
+    cy.get('a.sort_order.color_hover.pink.no_click.selected')
+    .find('.sort_order.selected.color_hover.pink.no_click').click()
+    cy.get('#results_page_1').should('exist')
+    cy.wait(3000)
 })
 
 
