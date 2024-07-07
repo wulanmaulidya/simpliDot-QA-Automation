@@ -1,13 +1,12 @@
-## SimpliDot-QA-Automation
-## Wulan Maulidya
+## SimpliDot-QA-Automation-Wulan Maulidya
 ---------------
-<strong>[ Disclaimer ]</strong>:
+## Depedency
 1. Project ini menggunakan Node.js versi v21.5.0
 2. Project ini menggunakan Cypress versi v13.13.0
 3. Project ini menggunakan cucumber v4.3.1
 4. Project ini menggunakan plugin prettier v3.3.2
 ----------------
-<strong>[ Note ]</strong>:<p>
+## Note
 Pengujian pada fitur "Mark as Favorite" nantinya akan mengalami error pada scenario 4 (sorting movie)<br>
 Disebabkan karena adanya elements website yang tidak terdefinisi<br>
 sehingga cypress tidak bisa mendektesi element tersebut untuk diinteraksi<br>
@@ -26,7 +25,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 
 ```
 ----------------
-Github ini berisikan beberapa point yaitu:
+## Point yang dikerjakan
 1. <strong>Code Automation</strong> ✅
 2. <strong>Scenario Pengujian</strong> ✅
 ```feature
@@ -75,20 +74,16 @@ futhermore user can sorting their favorite movie list
        Then the movie should not exist in their favorite list
 
 ```
-3. <strong>SreenShots dan ScreenRecord Automation </strong>✅<br>
-    A. ScreenShots (evidence pengujian berhasil)<p>
+3. <strong>SreenShots dan ScreenRecord Automation </strong>✅<p>
    <img width="959" alt="image" src="https://github.com/wulanmaulidya/simpliDot-QA-Automation/assets/91161995/16f5421b-be87-4518-8e0a-08c6f52a4a41"></p>
-   B. ScreenRecord (evidence pengujian berhasil)<p>
    https://github.com/wulanmaulidya/simpliDot-QA-Automation/assets/91161995/05af6c78-89e5-42c6-a00a-c0ac5f0e04af
-
-
-
    
-5. <strong>Cara Mengganti Username dan Password Akun Tmdb </strong>✅<br>
+4. <strong>Cara Mengganti Username dan Password Akun Tmdb </strong>✅<br>
    Untuk mengubah username dan password Tmdb silahkan untuk mengakses folder di bawah ini:<br>
    A. Buka folder Cypress > Fixtures > loginData.json<br>
    `fixtures/loginData.json`<br>
-6. <strong>Note Untuk Reviewer</strong> ✅<br>
+   
+5. <strong>Note Untuk Reviewer</strong>✅<br>
 Point berapa saja dari <strong>kriteria wajib</strong> dan <strong>optional task</strong> yg sudah dikerjakan:</p>
     A. <strong>Kriteria Wajib</strong>:
 <ul>
