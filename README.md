@@ -7,7 +7,7 @@
 3. Project ini menggunakan cucumber v4.3.1
 4. Project ini menggunakan plugin prettier v3.3.2
 ----------------
-<strong>[ Note ]</strong>:<br>
+<strong>[ Note ]</strong>:<p>
 Pengujian pada fitur "Mark as Favorite" nantinya akan mengalami error pada scenario 4 (sorting movie)<br>
 Disebabkan karena adanya elements website yang tidak terdefinisi<br>
 sehingga cypress tidak bisa mendektesi element tersebut untuk diinteraksi<br>
