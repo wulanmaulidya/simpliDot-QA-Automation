@@ -152,6 +152,26 @@ username dan password dibuat di dalam file <strong>support/login_helper.js</stro
 
 <li><strong>Point 2</strong>: Penulisan scenario menggunakan bahasa inggris (us) (ada pada nomor 2 di atas) ✅</li>
 <li><strong>Point 5</strong>: Memberikan saran ke tim UI / UX maupun developer dari hasil dan fungsionalitas fitur saat ini yg menurut anda ada kurang ✅</li><br>
-   
-   
+
+## Feedback/Saran
+----------------
+1. <strong>Saran untuk Developer</strong><br>
+user tidak bisa me-remove dan undo favorite film dari daftar kesukaan mereka melalui profile (button dibawah desc),<br>
+user harus me-remove movie/undo favorite dari beranda (dicari satu-satu filmnya) ini membuat UX tidak efisien dan kurang flexible<br>
+baiknya developer bisa menangani route dan integrasi pada databasenya dengan lebih baik lagi.<br>
+<img width="959" alt="image" src="https://github.com/wulanmaulidya/simpliDot-QA-Automation/assets/91161995/ea9fc2de-1353-4917-b7a4-163f944712c3"><p>
+
+2. <strong>Saran untuk UI/UX</strong><br>
+ui/ux terkait fitur favorite di beranda menurut saya harus dibenahi,<br>
+ketika user marks as favorite lewat hompage aplikasi notifnya akan bertumpuk jika kita menambahkan secara cepat<br>
+dan terlihat acak-acakan.<br>
+<img width="958" alt="image" src="https://github.com/wulanmaulidya/simpliDot-QA-Automation/assets/91161995/ffdc3564-efd3-475d-a3c5-db8e292e98df"><p>
+
+3. <strong>Saran cy.get/data-test pengujian</strong><br>
+ini di luar dari fitur marks as favorite, tapi saya sebagai QA/tester ingin memberi saran kepada developer untuk lebih aware<br>
+terhadap penamaan element website, seperti konsisten memberikan id, name, class untuk memudahkan environment pengujian pada aplikasi<br>
+code clean pengujian dihasilkan dari developer yang juga konsisten dan clean dalam penamaan sebuah element website<br>
+untuk menghindari error seperti pada scenario 4.<br>
+
+
 
