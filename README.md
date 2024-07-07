@@ -79,7 +79,9 @@ futhermore user can sorting their favorite movie list
     A. ScreenShots (evidence pengujian berhasil)<p>
    <img width="959" alt="image" src="https://github.com/wulanmaulidya/simpliDot-QA-Automation/assets/91161995/16f5421b-be87-4518-8e0a-08c6f52a4a41"></p>
    B. ScreenRecord (evidence pengujian berhasil)<p>
-   
+   https://github.com/wulanmaulidya/simpliDot-QA-Automation/assets/91161995/05af6c78-89e5-42c6-a00a-c0ac5f0e04af
+
+
 
    
 5. <strong>Cara Mengganti Username dan Password Akun Tmdb </strong>✅<br>
